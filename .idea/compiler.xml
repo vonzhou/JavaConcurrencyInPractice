@@ -22,11 +22,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="JavaConcurrencyInPractice" />
         <module name="javase-hello" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="javase-hello" target="1.8" />
+      <module name="JavaConcurrencyInPractice" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
