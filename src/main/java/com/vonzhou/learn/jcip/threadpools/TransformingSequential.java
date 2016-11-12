@@ -7,6 +7,7 @@ import java.util.concurrent.*;
  * TransformingSequential
  * <p/>
  * Transforming sequential execution into parallel execution
+ * 当每个节点的计算可以独立进行的时候
  *
  * @author Brian Goetz and Tim Peierls
  */
@@ -63,7 +64,7 @@ public abstract class TransformingSequential {
     interface Element {
     }
 
-    interface Node <T> {
+    interface Node<T> {
         T compute();
 
         List<Node<T>> getChildren();
