@@ -36,6 +36,10 @@ public class BoundedExecutor {
                 }
             });
         } catch (RejectedExecutionException e) {
+            /**
+             * Semaphore 用来限制任务提交的频率
+             * 然而还是有可能饱和，导致任务被拒绝！
+             */
             semaphore.release();
         }
     }
