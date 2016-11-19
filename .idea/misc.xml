@@ -38,6 +38,14 @@
       <property name="caretWidth" class="java.lang.Integer" />
     </properties>
   </component>
+  <component name="EclipseCodeFormatter">
+    <option name="defaultSettings" value="true" />
+    <option name="formatter" value="ECLIPSE" />
+    <option name="id" value="1479197734804" />
+    <option name="name" value="default" />
+    <option name="pathToConfigFileJava" value="D:/dev/intellij config/NetEase_NIS_CodeFormatter.xml" />
+    <option name="selectedJavaProfile" value="NetEase_CodeFormatter" />
+  </component>
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
