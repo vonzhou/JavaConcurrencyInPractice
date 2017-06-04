@@ -46,7 +46,7 @@ public class LogService {
     public void log(String msg) throws InterruptedException {
         synchronized (this) {
             if (isShutdown)
-                throw new IllegalStateException(/*...*/);
+                throw new IllegalStateException("Cannot log, log service shutdown!");
             ++reservations;
         }
         queue.put(msg);

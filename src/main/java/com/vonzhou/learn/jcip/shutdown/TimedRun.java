@@ -25,7 +25,21 @@ public class TimedRun {
             throw launderThrowable(e.getCause());
         } finally {
             // Harmless if task already completed
-            task.cancel(true); // interrupt if running
+            boolean res = task.cancel(true); // interrupt if running
+            System.out.println("Future cancel result :" + res);
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            timedRun(new PrintTask(), 1L, TimeUnit.SECONDS);
+
+            /**
+             * 任务停止运行了,但是如果线程在活着,主线程也不会退出
+             */
+//            taskExec.shutdown();
+        } catch (InterruptedException e) {
+            System.out.println("任务被取消!");
         }
     }
 }
